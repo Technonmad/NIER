@@ -7,7 +7,7 @@
         <script language="javascript">
             function moveTo() 
             {
-                location.href = "messages.php"; /* ссылка на новую страницу */
+                location.href = "login.php"; /* ссылка на новую страницу */
             }
                 window.onload=setTimeout('moveTo()', 4000); /* время задержки (в милисекундах) */
         </script>
@@ -15,9 +15,7 @@
 
     <body>
         <div class="thx">
-            <h1>Благодарю за регистрацию.
-                <br>А теперь пошлите чатиться! :)</br>
-            </h1>
+            <h1>Благодарю за регистрацию.</h1>
         </div>
     </body>
 </html>
