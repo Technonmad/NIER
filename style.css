@@ -1,4 +1,10 @@
-body {background: white;}
+body {background: rgb(210, 220, 252);}
+
+.invalid
+{
+	border: 3px solid red;
+}
+
 .reg
 {
 	width: 80%;
@@ -62,25 +68,25 @@ a{color: blue;}
     border: 1px solid rgba(0, 0, 255, 0.692);
 }
 
-.msg input[name=message]
+.msg textarea
 {
     margin-top: 20px;
     padding-bottom: 100px;
+    padding-left: 15px;
+    font-size: 12pt;
     width: 15cm;
-    color: gray;
+    color: black;
     position: absolute;
     left: 17.75cm;
     top: 18.5cm;
+    word-break: break-all;
+    overflow-y: scroll;
+    max-height: 120px;
+    white-space: normal;
+    border: 3px solid black;
 }
 
-.msg input[name=message_log]
-{
-    top: 30px;
-    width: 15cm;
-    height: 17.5cm;
-    position: absolute;
-    left: 17.75cm;
-}
+
 
 #online
 {
@@ -93,15 +99,17 @@ a{color: blue;}
 #online1
 {
     position: absolute;
-    overflow: auto;
+    overflow-y: scroll;
     left: 33.5cm;
     top: 60px;
     border: 1px solid black;
     height: 16.6cm;
+    max-height: 16.6cm;
     width: 6cm;
+    border: 3px solid black;
 }
 
-.msg input[type=button]
+.msg input[name="sent"]
 {
     border: 0;
     background-color: rgba(0, 0, 255, 0.692);
@@ -110,6 +118,23 @@ a{color: blue;}
     position: absolute;
     left: 17.75cm;
     top: 22.5cm;
+}
+
+.msg p
+{
+    position: absolute;
+    left: 27cm;
+    top: 22.3cm;
+    width: 86.1px;
+    height: 50px;
+}
+
+.msg a
+{
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0.692);
+    text-decoration: none;
+    color: white;
 }
 
 footer
@@ -124,4 +149,29 @@ footer img
     width:40px;
     height:40px;
     margin-top: 10px;
+}
+
+.msg_log
+{
+    border: 3px solid black;
+    width: 15cm;
+    position: absolute;
+    left: 17.75cm;
+    top: 1.6cm;
+    overflow-y: scroll;
+    height: 16.6cm;
+    max-height: 16.6cm;
+    display: inline;
+}
+
+.fromUser
+{
+    color: rgb(41, 106, 180);
+}
+
+.msg_log table:nth-child(2n) {
+    background: rgb(250, 233, 81); /* Цвет фона */
+   } 
+.msg_log table:nth-child(2n+1) {
+    background: rgb(140, 235, 103); /* Цвет фона */
 }
