@@ -7,8 +7,9 @@
     </head>
 
     <body>
-        <div class="msg">
-            <input type="text" name="message_log">
+    <form method="POST" action="scripts/sentMessage.php">
+        <div class="msg_log">
+            <?php require 'scripts/takeMessage.php'?>
         </div>
         <div id="online">
             Люди онлайн
@@ -17,10 +18,14 @@
             
         </div>
         <div class="msg">
-            <input type="text" name="message" value="Сообщение...">
+            <textarea name="message" cols="5" rows="5" placeholder="Сообщение..."></textarea>
         </div>
         <div class="msg">
-            <input type="button" value="Отправить">
+            <input type="submit" name="sent" value="Отправить">
         </div>
+        <div class="msg">
+            <p><a href="scripts/exit.php">Выйти</a></p>
+        </div>
+    </form>
     </body>
 </html>
