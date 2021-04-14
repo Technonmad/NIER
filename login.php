@@ -8,24 +8,17 @@
 
     <body>
         <div class="reg">
-            <form method="post" action="login.php">
+            <form method="post" action="scripts/CheckLogin.php">
             <h1>Вход</h1>
-            <p>Логин:</p>
-            <input type="text" name="login">
+            <p>Email:</p>
+            <input type="email" name="email">
             <p>Пароль:</p>
             <input type="password" name="password">
             <br><input type="submit" value="Влетаем"></br>
             <br><a href="index.php">Еще не зарегестрированы?</a></br>
         </div>
 
-        <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $connect = new mysqli($servername,$username,$password,"nier_database");
-
-            
-        ?>
+     
 
         <footer>
             Work again
