@@ -8,7 +8,7 @@
 
     <body>
         <div class="reg">
-            <form method="POST" action="index.php">
+            <form name="registration" method="POST" action="scripts/registration.php">
                 <h1>Регистрация</h1>
                 <p>E-mail:</p>
                 <input type="email" name = "email" placeholder="ivan_ivanov@mail.ru">
@@ -20,36 +20,9 @@
                 <br><a href="login.php">Уже есть аккаунт?</a></br>
             </form>
         </div>
-        <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $connect = new mysqli($servername,$username,$password,"nier_database");
 
-            if ($connect->connect_errno)
-            {
-                echo "Ошибка на сайте ";
-                echo "Номер ошибки: ".$connect->connect_errno."\n";
-                echo "Ошибка: ".$connect->connect_error."\n";
-                exit;
-            }
-
-            if (isset($_POST['email']) && isset($_POST['login']) && isset($_POST['password']))
-            {
-                $email = $_POST['email'];
-                $login = $_POST['login'];
-                $password = $_POST['password'];
-
-                $sql = "insert into accounts (Login, Email, Password) values ('$login', '$email', '$password')";
-                
-
-                if ($connect->query($sql))
-                    header('Location: thanks.php');
-                else
-                    echo "Error: " . $sql . "<br>" . $connect->error;;
-            }
-        ?>
-
+        
+        
         <footer>
             Work again
             <br>2018 - 2021
