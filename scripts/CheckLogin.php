@@ -8,13 +8,23 @@
     {
         $result = $connect->query("select * from `accounts` where `Email` = '$email' and `Password` = '$password'");
         $user = $result->fetch_assoc();
-        if(count($user) != 0)
+        try
         {
-            setcookie("user", $user['Login'], time() + 3600, "/");
-            header('Location: ../messages.php');
+            if(count($user) != 0)
+            {
+                setcookie("user", $user['Login'], time() + 3600, "/");
+                header('Location: ../messages.php');
+            }
+            else
+            {
+                header('Location: ../login.php');
+            }
         }
-
-    }
+        catch(Throwable $e)
+        {
+            header('Location: ../login.php');
+        }
+    }   
     
     $connect->close();
 ?>

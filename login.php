@@ -11,9 +11,9 @@
             <form method="post" action="scripts/CheckLogin.php">
             <h1>Вход</h1>
             <p>Email:</p>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
             <p>Пароль:</p>
-            <input type="password" name="password">
+            <input type="password" name="password" required>
             <br><input type="submit" value="Влетаем"></br>
             <br><a href="index.php">Еще не зарегестрированы?</a></br>
         </div>

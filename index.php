@@ -11,11 +11,11 @@
             <form name="registration" method="POST" action="scripts/registration.php">
                 <h1>Регистрация</h1>
                 <p>E-mail:</p>
-                <input type="email" name = "email" placeholder="ivan_ivanov@mail.ru">
+                <input type="email" name = "email" placeholder="ivan_ivanov@mail.ru" required>
                 <p>Логин:</p>
-                <input type="text" name="login">
+                <input type="text" name="login" required>
                 <p>Пароль:</p>
-                <input type="password" name="password">
+                <input type="password" name="password" required>
                 <br><input type="submit" value="Зарегестрироваться" name="submit_button"></br>
                 <br><a href="login.php">Уже есть аккаунт?</a></br>
             </form>

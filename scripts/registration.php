@@ -10,6 +10,10 @@
         $connect->query("insert into `accounts`(`Login`,`Email`,`Password`) values('$login','$email','$password')");
         header('Location: ../thanks.php');
     }
+    else
+    {
+        header('Location:../index.php');
+    }
     
     $connect->close();
 ?>
